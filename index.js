@@ -16,7 +16,7 @@ counters.forEach(counter => {
     let increament = target/time;
     if(count < target){
         counter.innerText = Math.ceil(count + increament);
-        setTimeout(updateCount, 1500);
+        setTimeout(updateCount, 150);
     }else{
         counter.innerText = target;
     }
