@@ -1,28 +1,35 @@
-// let countER = document.querySelector('.counter');
-// let count = 1;
-// setInterval(() =>{
-//     if(count < 75){
-//         count++;
-//         countER.innerText = count;
-//     }
-// }, 10);
+let heart = document.querySelector('.heart');
+function printHeart(){
+    let heartRandom = Math.floor(Math.random() * 75 + 50);
+    heart.innerText = heartRandom;
+}
+printHeart();
 
-let counters = document.querySelectorAll('.counter');
-let time = 300;
-counters.forEach(counter => {
-    let updateCount = () => {
-    let target = +counter.getAttribute('data-target');
-    let count = +counter.innerText;
-    let increament = target/time;
-    if(count < target){
-        counter.innerText = Math.ceil(count + increament);
-        setTimeout(updateCount, 150);
-    }else{
-        counter.innerText = target;
-    }
-    };
-    updateCount();
-})
+
+let hours = document.querySelector('.hours');
+function printHours(){
+    let hoursRandom = Math.floor(Math.random() * 8 + 1);
+    hours.innerText = hoursRandom;
+}
+printHours();
+
+
+let water = document.querySelector('.water');
+function printWater(){
+    let waterRandom = Math.floor(Math.random() * 10 + 1);
+    water.innerText = waterRandom;
+}
+printWater();
+
+let steps = document.querySelector('.steps');
+function printSteps(){
+    let stepsRandom = Math.floor(Math.random() * 11000 + 500);
+    steps.innerText = stepsRandom;
+}
+printSteps();
+
+
+
 let healthCondition = document.querySelector('.health');
 setTimeout(() =>{
     healthCondition.innerText = 'You are FIT! but মন খারাপ 🥹'
